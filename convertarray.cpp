@@ -19,7 +19,7 @@
 #include <ranges>
 #include <algorithm>
 
-#define fwd(arg) std::forward<decltype(arg)>(arg)
+using fwd(arg) = std::forward<decltype(arg)>(arg)
 
 template <class T, std::size_t N>
 constexpr std::array<std::remove_cv_t<T>, N> to_array( T (&a)[N] ){
